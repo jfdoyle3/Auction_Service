@@ -1,0 +1,35 @@
+{
+	"info": {
+		"_postman_id": "cac4ca75-a9ae-439b-9e09-fcd1652d8556",
+		"name": "Auction Service",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Create Auction",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\":\"Super nice car\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{AUCTIONS_HOST}}/auction",
+					"host": [
+						"{{AUCTIONS_HOST}}"
+					],
+					"path": [
+						"auction"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
