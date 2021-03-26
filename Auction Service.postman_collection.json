@@ -12,7 +12,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"title\":\"Super nice car\"\r\n}",
+					"raw": "{\r\n    \"title\":\"Rare Coins\"\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -26,6 +26,69 @@
 					],
 					"path": [
 						"auction"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Scan  Auctions",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{AUCTIONS_HOST}}/auctions",
+					"host": [
+						"{{AUCTIONS_HOST}}"
+					],
+					"path": [
+						"auctions"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Auction by ID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{AUCTIONS_HOST}}/auction/0487a4a5-3b17-443b-8dab-8e423e500bcb",
+					"host": [
+						"{{AUCTIONS_HOST}}"
+					],
+					"path": [
+						"auction",
+						"0487a4a5-3b17-443b-8dab-8e423e500bcb"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Place Bid by ID",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"amount\": 600\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{AUCTIONS_HOST}}/auction/4e8f6db9-7270-417a-9bdd-cb48276609f8/bid",
+					"host": [
+						"{{AUCTIONS_HOST}}"
+					],
+					"path": [
+						"auction",
+						"4e8f6db9-7270-417a-9bdd-cb48276609f8",
+						"bid"
 					]
 				}
 			},
