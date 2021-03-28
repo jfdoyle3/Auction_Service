@@ -32,17 +32,23 @@
 			"response": []
 		},
 		{
-			"name": "Scan  Auctions",
+			"name": "Get Auctions",
 			"request": {
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "{{AUCTIONS_HOST}}/auctions",
+					"raw": "{{AUCTIONS_HOST}}/auctions?status=OPEN",
 					"host": [
 						"{{AUCTIONS_HOST}}"
 					],
 					"path": [
 						"auctions"
+					],
+					"query": [
+						{
+							"key": "status",
+							"value": "OPEN"
+						}
 					]
 				}
 			},
@@ -81,13 +87,13 @@
 					}
 				},
 				"url": {
-					"raw": "{{AUCTIONS_HOST}}/auction/4e8f6db9-7270-417a-9bdd-cb48276609f8/bid",
+					"raw": "{{AUCTIONS_HOST}}/auction/0a1890fc-3208-4372-9fcf-3e14df495a37/bid",
 					"host": [
 						"{{AUCTIONS_HOST}}"
 					],
 					"path": [
 						"auction",
-						"4e8f6db9-7270-417a-9bdd-cb48276609f8",
+						"0a1890fc-3208-4372-9fcf-3e14df495a37",
 						"bid"
 					]
 				}
