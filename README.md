@@ -34,3 +34,8 @@ curl --location --request POST 'https://YOUR_AUTH0_DOMAIN/oauth/token' \
 --data-urlencode 'password=YOUR_PASSWORD' \
 --data-urlencode 'grant_type=password' \
 --data-urlencode 'scope=openid'
+
+
+Create Secret.pem file
+This file will contain your Auth0 public certificate, used to verify tokens.
+Create a secret.pem file in the root folder of this project. Simply paste your public certificate in there.

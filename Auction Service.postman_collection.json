@@ -8,11 +8,21 @@
 		{
 			"name": "Create Auction",
 			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{AUTH_TOKEN}}",
+							"type": "string"
+						}
+					]
+				},
 				"method": "POST",
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"title\":\"Rare Coins\"\r\n}",
+					"raw": "{\r\n    \"title\": \"Guitar\"\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -37,7 +47,7 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "{{AUCTIONS_HOST}}/auctions?status=OPEN",
+					"raw": "{{AUCTIONS_HOST}}/auctions?status=UUTGGD",
 					"host": [
 						"{{AUCTIONS_HOST}}"
 					],
@@ -47,7 +57,7 @@
 					"query": [
 						{
 							"key": "status",
-							"value": "OPEN"
+							"value": "UUTGGD"
 						}
 					]
 				}
@@ -60,13 +70,13 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "{{AUCTIONS_HOST}}/auction/0487a4a5-3b17-443b-8dab-8e423e500bcb",
+					"raw": "{{AUCTIONS_HOST}}/auction/8dcf6e82-9765-40dd-a0bb-1695fdcc78ae",
 					"host": [
 						"{{AUCTIONS_HOST}}"
 					],
 					"path": [
 						"auction",
-						"0487a4a5-3b17-443b-8dab-8e423e500bcb"
+						"8dcf6e82-9765-40dd-a0bb-1695fdcc78ae"
 					]
 				}
 			},
@@ -87,14 +97,99 @@
 					}
 				},
 				"url": {
-					"raw": "{{AUCTIONS_HOST}}/auction/0a1890fc-3208-4372-9fcf-3e14df495a37/bid",
+					"raw": "{{AUCTIONS_HOST}}/auction/2cb2e784-6708-4bfb-a740-452195644d10/bid",
 					"host": [
 						"{{AUCTIONS_HOST}}"
 					],
 					"path": [
 						"auction",
-						"0a1890fc-3208-4372-9fcf-3e14df495a37",
+						"2cb2e784-6708-4bfb-a740-452195644d10",
 						"bid"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Auth0 Token test",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "client_id",
+							"value": "GXw8jDwfNefBeemGOudLYhgjfp0AXT5O",
+							"type": "text"
+						},
+						{
+							"key": "username",
+							"value": "indellibleink@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "aT>L2Dn*)[Bi",
+							"type": "text"
+						},
+						{
+							"key": "grant_type",
+							"value": "password",
+							"type": "text"
+						},
+						{
+							"key": "scope",
+							"value": "openid",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://dev-pk8an90s.us.auth0.com/oauth/token",
+					"protocol": "https",
+					"host": [
+						"dev-pk8an90s",
+						"us",
+						"auth0",
+						"com"
+					],
+					"path": [
+						"oauth",
+						"token"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "auth-service Test",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{AUTH_TOKEN}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "https://1517edcdy0.execute-api.us-east-1.amazonaws.com/dev/private",
+					"protocol": "https",
+					"host": [
+						"1517edcdy0",
+						"execute-api",
+						"us-east-1",
+						"amazonaws",
+						"com"
+					],
+					"path": [
+						"dev",
+						"private"
 					]
 				}
 			},
