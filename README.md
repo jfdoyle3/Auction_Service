@@ -21,6 +21,7 @@ To remove project
 sls remove -v
 
 Create Auction.js
+    Customized for front end 
     Setting the Auction time to end
         endDate.setHours(now.getHours()+1); // 1 hour
         endDate.setDays(now.getDays()+1);   // 1 day 
