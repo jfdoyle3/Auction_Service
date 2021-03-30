@@ -1,6 +1,21 @@
 # Auction Services
- Serverless Framework with Node.js, AWS & Microservices, DynamoDB
+ Serverless Framework with Node.js, React, AWS & Microservices, DynamoDB, Bucket S3, Auth0
 
+Install: AWS CLI
+ https://docs.aws.amazon.com/cli/latest/userguide/install-cliv2.html
+
+Install: Serverless CLI - using npm: npm install -g serverless
+ https://www.serverless.com/framework/docs/getting-started/
+
+VS Code Extension:
+Name: Serverless IDE
+Id: threadheap.serverless-ide-vscode
+Description: Enhanced support for AWS SAM, CloudFormation and Serverless Framework
+Version: 0.5.30
+Publisher: ThreadHeap
+VS Marketplace Link: https://marketplace.visualstudio.com/items?itemName=ThreadHeap.serverless-ide-vscode
+
+sls usage:
 switches
 -v verbose
 -f 'function name'
